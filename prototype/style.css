@@ -1,0 +1,189 @@
+:root {
+  --ink: #e7dcc8;
+  --mute: #8e8474;
+  --ground: #12100c;
+  --panel: #1c1813;
+  --line: #3a3228;
+  --copper: #c57a3a;
+  --here: #ead7a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: "Atkinson Hyperlegible", "Segoe UI", sans-serif;
+}
+
+#root,
+.world-shell {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.world-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.world-who {
+  margin: 0;
+  color: var(--copper);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.world-switch {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.hand {
+  background: transparent;
+  color: var(--mute);
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.65rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.hand.is-you {
+  color: var(--ground);
+  background: var(--here);
+  border-color: var(--here);
+}
+
+.world-stage {
+  flex: 1;
+  min-height: 32rem;
+  cursor: grab;
+}
+
+.atlas {
+  width: 100%;
+  height: min(70vh, 36rem);
+  min-height: 32rem;
+  display: block;
+  background:
+    radial-gradient(ellipse at center, #241c14 0%, var(--ground) 70%);
+}
+
+.atlas-way {
+  stroke: #6a5b48;
+  stroke-width: 4;
+}
+
+.atlas-node {
+  fill: #3a3228;
+  stroke: #8a7a64;
+  stroke-width: 2;
+}
+
+.atlas-unknown {
+  fill: #2a241c;
+  stroke: #5c5246;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+}
+
+.atlas-here {
+  fill: #4a3b28;
+  stroke: var(--copper);
+  stroke-width: 3;
+}
+
+.atlas-pin {
+  fill: var(--copper);
+}
+
+.atlas-name {
+  fill: var(--ink);
+  font-size: 14px;
+  font-family: Fraunces, Georgia, serif;
+}
+
+.atlas-name.is-dim {
+  fill: var(--mute);
+  font-size: 12px;
+  font-style: italic;
+}
+
+.atlas-other {
+  fill: var(--here);
+  font-size: 12px;
+}
+
+.atlas-site {
+  fill: #5c4a34;
+  stroke: var(--here);
+  stroke-width: 1.5;
+}
+
+.atlas-site.is-new {
+  fill: #2e2a24;
+  stroke: var(--mute);
+}
+
+.atlas-lot {
+  fill: var(--ink);
+}
+
+.world-after {
+  margin: 0;
+  padding: 0.4rem 1rem;
+  color: var(--here);
+  font-size: 0.9rem;
+}
+
+.world-sheet {
+  margin: 0 1rem 1rem;
+  padding: 0.9rem 1rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.world-sheet-title {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem;
+  font-weight: 600;
+}
+
+.world-line {
+  margin: 0.2rem 0;
+  color: var(--ink);
+}
+
+.world-sheet-acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.touch {
+  font: inherit;
+  color: var(--ground);
+  background: var(--here);
+  border: 0;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

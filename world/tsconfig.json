@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "lib": ["ES2022", "DOM", "WebWorker"]
+  },
+  "include": ["src/domain", "src/play", "src/render", "src/workers", "src/asset-gate", "src/art-gate", "src/biome-lab", "src/main.ts", "src/three-webgpu.d.ts"]
+}

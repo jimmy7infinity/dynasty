@@ -1,0 +1,20 @@
+node_modules
+playtest-*.jsonl
+.planning/
+world/.planning/
+world/public/asset-gate/
+world/public/art-gate/
+world/assets/
+
+# Unreal
+DynastyWorld/Binaries/
+DynastyWorld/DerivedDataCache/
+DynastyWorld/Intermediate/
+DynastyWorld/Saved/
+DynastyWorld/Build/
+DynastyWorld/.vs/
+DynastyWorld/NativeTests/worldgen_determinism
+DynastyWorld/NativeTests/*.dSYM/
+*.sln
+*.xcworkspace
+*.xcodeproj
